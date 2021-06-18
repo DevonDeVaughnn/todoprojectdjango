@@ -1,0 +1,9 @@
+{% extends 'base.html' %} {% block content %}
+<h2 class="devvy-activity-title">Tasks</h2>
+<ul class="devy-activity-list">
+  {% for t in activities_list %}
+  <li><a href="{% url 'activity' id=t.id %}">{{ t.title }}</a></li>
+  {% endfor %}
+</ul>
+
+{% endblock %}
